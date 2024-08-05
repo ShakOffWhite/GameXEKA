@@ -1,6 +1,6 @@
-let coinCount = 0;
-let coinsPerClick = 1;
-let levelName = "Новичок";
+let coinCount = parseInt(localStorage.getItem('coinCount')) || 0;
+let coinsPerClick = parseInt(localStorage.getItem('coinsPerClick')) || 1;
+let levelName = localStorage.getItem('levelName') || "Новичок";
 let lastClickTimes = [];
 
 const levels = [
@@ -66,6 +66,12 @@ function buyUpgrade() {
         coinsPerClick += 1;
         updateUI();
     }
+}
+
+function saveProgress() {
+    localStorage.setItem('coinCount', coinCount);
+    localStorage.setItem('coinsPerClick', coinsPerClick);
+    localStorage.setItem('levelName', levelName);
 }
 
 // Инициализация интерфейса при загрузке
