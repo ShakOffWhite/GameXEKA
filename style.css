@@ -11,10 +11,33 @@ body {
 
 .game-container {
     text-align: center;
+    width: 300px;
 }
 
-.scoreboard {
+.info-container {
     margin-bottom: 20px;
+}
+
+.scoreboard, .level-board, .shop-container {
+    margin-bottom: 10px;
+}
+
+.scoreboard h1, .level-board h2, .shop-container h2 {
+    margin: 0;
+}
+
+.shop-container button {
+    padding: 10px;
+    background-color: gold;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+.shop-container button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
 }
 
 .hamster-container img {
