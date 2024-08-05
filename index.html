@@ -8,11 +8,22 @@
 </head>
 <body>
     <div class="game-container">
-        <div class="scoreboard">
-            <h1>Монеты: <span id="coinCount">0</span></h1>
+        <div class="info-container">
+            <div class="scoreboard">
+                <h1>Монеты: <span id="coinCount">0</span></h1>
+            </div>
+            <div class="level-board">
+                <h2>Уровень: <span id="levelName">Новичок</span></h2>
+                <p>Для следующего уровня: <span id="nextLevel">100</span> монет</p>
+            </div>
         </div>
         <div class="hamster-container">
             <img src="hamster.png" alt="Hamster" id="hamster" onclick="earnCoin()">
+        </div>
+        <div class="shop-container">
+            <h2>Магазин</h2>
+            <button onclick="buyUpgrade()">Купить улучшение: 100 монет</button>
+            <p>Текущий бонус: <span id="bonus">1</span> монета за клик</p>
         </div>
     </div>
     <script src="script.js"></script>
