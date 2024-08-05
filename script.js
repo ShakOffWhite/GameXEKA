@@ -1,6 +1,7 @@
 let coinCount = 0;
 let coinsPerClick = 1;
 let levelName = "Новичок";
+let lastClickTimes = [];
 
 const levels = [
     { name: "Новичок", threshold: 0 },
@@ -10,8 +11,25 @@ const levels = [
 ];
 
 function earnCoin() {
-    coinCount += coinsPerClick;
-    updateUI();
+    if (canClick()) {
+        coinCount += coinsPerClick;
+        updateUI();
+    }
+}
+
+function canClick() {
+    const now = Date.now();
+    lastClickTimes.push(now);
+
+    // убираем автокликер от сереги
+    lastClickTimes = lastClickTimes.filter(time => now - time < 1000);
+
+    
+    if (lastClickTimes.length > 10) {
+        return false;
+    }
+
+    return true;
 }
 
 function updateUI() {
@@ -50,4 +68,5 @@ function buyUpgrade() {
     }
 }
 
-updateUI(); // Инициализация
+// Инициализация интерфейса при загрузке
+document.addEventListener('DOMContentLoaded', updateUI);
