@@ -13,7 +13,7 @@ const levels = [
     { name: "Купил больницу", threshold: 2000, image: "hamster5.jpg" },
     { name: "Миллиардер", threshold: 4000, image: "hamster6.jpg" },
     { name: "Скупался", threshold: 8000, image: "hamster7.jpg" },
-    { name: "Стал казахом", threshold: 8000, image: "hamster8.png" },
+    { name: "Стал казахом", threshold: 10000, image: "hamster8.png" },
 ];
 
 function earnCoin() {
