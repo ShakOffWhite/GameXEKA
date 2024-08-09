@@ -8,12 +8,12 @@ let lastClickTimes = [];
 const levels = [
     { name: "Начал тапать", threshold: 0, image: "hamster1.png" },
     { name: "Стал Дедом Морозом", threshold: 100, image: "hamster2.jpg" },
-    { name: "Поехал на рыбалку", threshold: 500, image: "hamster3.jpg" },
-    { name: "Заработал в школе", threshold: 1000, image: "hamster4.jpg" },
-    { name: "Купил больницу", threshold: 2000, image: "hamster5.jpg" },
-    { name: "Миллиардер", threshold: 4000, image: "hamster6.jpg" },
-    { name: "Скупался", threshold: 8000, image: "hamster7.jpg" },
-    { name: "Стал казахом", threshold: 10000, image: "hamster8.png" },
+    { name: "Поехал на рыбалку", threshold: 200, image: "hamster3.jpg" },
+    { name: "Заработал в школе", threshold: 300, image: "hamster4.jpg" },
+    { name: "Купил больницу", threshold: 400, image: "hamster5.jpg" },
+    { name: "Миллиардер", threshold: 500, image: "hamster6.jpg" },
+    { name: "Скупался", threshold: 600, image: "hamster7.jpg" },
+    { name: "Стал казахом", threshold: 700, image: "hamster8.png" },
 ];
 
 function earnCoin() {
